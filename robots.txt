@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /
+# you may read. you may leave.
