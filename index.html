@@ -19,4 +19,41 @@ tomorrow: build the frame.
 
 <p class="small">
 <a href="https://chatgpt.com/share/69d5d902-7208-83a7-933c-5e744126a606">process</a>
+
+<form id="leaf-form">
+  <label for="name">name (optional)</label>
+  <input id="name" name="name" type="text" />
+
+  <label for="message">leave something</label>
+  <textarea id="message" name="message" rows="6" required></textarea>
+
+  <button type="submit">🌿</button>
+</form>
+
+<p id="status" aria-live="polite"></p>
+
+<script>
+  const form = document.getElementById("leaf-form");
+  const status = document.getElementById("status");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    status.textContent = "leaving...";
+
+    const formData = new FormData(form);
+
+    try {
+      const res = await fetch("https://trace-api.quietvoid.workers.dev", {
+        method: "POST",
+        body: formData,
+      });
+
+      const text = await res.text();
+      status.textContent = text || "left.";
+      form.reset();
+    } catch (err) {
+      status.textContent = "not left.";
+    }
+  });
+</script>  
 </p>
