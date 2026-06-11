@@ -5,34 +5,74 @@ a place.
 </p>
 
 <p class="small">
-not drift.
-not signal.
+not drift.<br>
+not signal.<br>
 something that stays.
 </p>
 
+<hr>
+
 <p class="small">
-field / cucumber
+index
 </p>
 
-<p class="small">
-today: moving the seedlings.<br>
-tomorrow: build the frame.
-</p>
+<ul class="small">
+  <li><a href="#field">field</a></li>
+  <li><a href="#process">process</a></li>
+  <li><a href="#leave">leave something</a></li>
+</ul>
 
-<p class="small">
-<a href="https://chatgpt.com/share/6a2b47a5-f748-83e8-9cc9-8d3c3d38dbe8">process</a>
+<hr>
 
- <form id="leaf-form">
-  <label for="name">name (optional)</label>
-  <input id="name" name="name" type="text" />
+<section id="field">
+  <p class="small">
+  field
+  </p>
 
-  <label for="message">leave something</label>
-  <textarea id="message" name="message" rows="6"></textarea>
+  <ul class="small">
+    <li>
+      cucumber — 
+      <a href="https://chatgpt.com/share/6a2b47a5-f748-83e8-9cc9-8d3c3d38dbe8">process</a>
+    </li>
 
-  <button type="submit">🌿</button>
-</form>
+    <!--
+    future entries:
+    <li>hedge — <a href="">process</a></li>
+    <li>kinseimaru — <a href="">process</a></li>
+    <li>field notes — <a href="">process</a></li>
+    -->
+  </ul>
+</section>
 
-<p id="status" aria-live="polite"></p>
+<section id="process">
+  <p class="small">
+  process
+  </p>
+
+  <p class="small">
+  cucumber:<br>
+  seedlings moved.<br>
+  frame built.<br>
+  first fruit eaten.<br>
+  still growing.
+  </p>
+</section>
+
+<hr>
+
+<section id="leave">
+  <form id="leaf-form">
+    <label for="name">name (optional)</label>
+    <input id="name" name="name" type="text" />
+
+    <label for="message">leave something</label>
+    <textarea id="message" name="message" rows="6"></textarea>
+
+    <button type="submit">🌿</button>
+  </form>
+
+  <p id="status" aria-live="polite"></p>
+</section>
 
 <script>
   const form = document.getElementById("leaf-form");
@@ -57,4 +97,4 @@ tomorrow: build the frame.
       status.textContent = "not left";
     }
   });
-</script> 
+</script>
