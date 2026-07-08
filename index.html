@@ -1,3 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>yakoudou</title>
+
+<style>
+
+  /* ←ここにCSSを書く */
+
+body{
+    margin:0;
+    background:#050505;
+    color:rgba(255,255,255,.72);
+    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+
+main{
+    max-width:900px;
+    margin:0 auto;
+    padding:4rem 2rem;
+}
+
+.small{
+    line-height:1.8;
+}
+
+.back{
+    display:inline-block;
+    margin:10rem 0 2rem;
+    color:rgba(255,255,255,.16);
+    text-decoration:none;
+    transition:.25s;
+}
+
+.back:hover{
+    color:rgba(255,255,255,.55);
+}
+
+</style>
+</head>
+
+<body>
+<main>
 <pre>yakoudou</pre>
 
 <p class="small">
@@ -89,6 +134,10 @@ index
   <p id="status" aria-live="polite"></p>
 </section>
 
+<a class="back" href="https://void-nul.net/signal/season.html">
+another source →
+</a>
+
 <script>
   const form = document.getElementById("leaf-form");
   const status = document.getElementById("status");
@@ -113,3 +162,6 @@ index
     }
   });
 </script>
+</main>
+</body>
+</html>
