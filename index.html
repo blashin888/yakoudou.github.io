@@ -8,6 +8,22 @@
 <style>
 
   /* ←ここにCSSを書く */
+
+.provenance-link {
+  margin-top: 3rem;
+  font-size: 0.8rem;
+  opacity: 0.35;
+}
+
+.provenance-link a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.provenance-link a:hover {
+  opacity: 0.8;
+}
+  
 .process-link{
     display:inline-block;
     margin-left:1.2rem;
@@ -270,6 +286,10 @@ last update<br>
     <span class="arrow">→</span>
 </a>
 
+<p class="provenance-link">
+  <a href="/provenance/">provenance →</a>
+</p>
+  
 <script>
   const form = document.getElementById("leaf-form");
   const status = document.getElementById("status");
